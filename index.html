@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aleksander Hoff | Cybersecurity & Infrastructure</title>
+    <meta name="description" content="Aleksander Hoff - Cybersecurity student, homelab builder, and pentesting enthusiast." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="nav">
+      <div class="nav__logo">AH<span class="cursor">_</span></div>
+      <ul class="nav__links">
+        <li><a href="#pentesting">01. Pentesting</a></li>
+        <li><a href="#student">02. Education</a></li>
+        <li><a href="#homelab">03. Homelab</a></li>
+        <li><a href="#photography">04. Photography</a></li>
+        <li><a href="#contact">05. Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="terminal-window hero__terminal">
+          <div class="terminal-window__bar">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+            <span class="terminal-window__title">aleksander@ntnu:~$</span>
+          </div>
+          <div class="terminal-window__body">
+            <p><span class="prompt">$</span> whoami</p>
+            <h1 class="hero__name">Aleksander Hoff</h1>
+            <p><span class="prompt">$</span> cat role.txt</p>
+            <p class="hero__role">Cybersecurity &amp; Digital Infrastructure student @ NTNU &mdash; building, breaking, and documenting systems.</p>
+            <p><span class="prompt">$</span> ./explore.sh <span class="typed-cursor">_</span></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pentesting">
+        <h2 class="section__heading"><span class="section__index">01</span> Pentesting</h2>
+        <div class="section__content">
+          <p>
+            Hands-on offensive security practice through CTF-style labs and structured methodology
+            &mdash; reconnaissance, enumeration, exploitation, and reporting. Currently building out
+            a public writeup archive for retired lab machines and documenting tooling in
+            <a href="https://github.com/AVEX41/SecScripts" target="_blank" rel="noopener">SecScripts</a>.
+          </p>
+          <div class="badge-row">
+            <!-- TODO: Replace with your real Hack The Box / TryHackMe profile badge embed -->
+            <a class="badge badge--placeholder" href="#" target="_blank" rel="noopener">Hack&nbsp;The&nbsp;Box profile &rarr; add link</a>
+            <a class="badge badge--placeholder" href="#" target="_blank" rel="noopener">TryHackMe profile &rarr; add link</a>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <h3>SecScripts</h3>
+              <p class="card__lang">Python</p>
+              <p>Utility and automation scripts used during security coursework and lab exercises.</p>
+              <a href="https://github.com/AVEX41/SecScripts" target="_blank" rel="noopener">View repo &rarr;</a>
+            </article>
+            <article class="card card--placeholder">
+              <h3>Retired-Box Writeup</h3>
+              <p class="card__lang">Methodology</p>
+              <p>TODO: link your first published HTB/THM retired-machine writeup here.</p>
+              <a href="#">Add writeup &rarr;</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="student">
+        <h2 class="section__heading"><span class="section__index">02</span> IT Student</h2>
+        <div class="section__content">
+          <p>
+            Studying <strong>Digital infrastruktur og cybersikkerhet</strong> at NTNU Gjøvik.
+            Coursework spans networking, systems administration, scripting, and applied
+            cybersecurity &mdash; documented and versioned like real projects, not throwaway assignments.
+          </p>
+          <div class="card-grid">
+            <article class="card">
+              <h3>DSCG1002 &mdash; Prosjekt</h3>
+              <p class="card__lang">HTML</p>
+              <p>Cybersikkerhet og Teamarbeid course project website.</p>
+              <a href="https://github.com/AVEX41/DSCG1002-Prosjekt" target="_blank" rel="noopener">View repo &rarr;</a>
+            </article>
+            <article class="card">
+              <h3>BulkRenamePS</h3>
+              <p class="card__lang">PowerShell</p>
+              <p>DCSG1005 assignment: batch file-renaming tool with interactive prompts and conflict handling.</p>
+              <a href="https://github.com/AVEX41/BulkRenamePS" target="_blank" rel="noopener">View repo &rarr;</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="homelab">
+        <h2 class="section__heading"><span class="section__index">03</span> Homelab</h2>
+        <div class="section__content">
+          <p>
+            A self-hosted infrastructure stack used to practice virtualization, automation,
+            and storage design &mdash; Proxmox, ZFS, and infrastructure-as-code, managed like production.
+          </p>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Homelab</h3>
+              <p class="card__lang">Terraform (HCL)</p>
+              <p>Infrastructure-as-code configuration for the homelab environment: provisioning, networking, and services.</p>
+              <a href="https://github.com/AVEX41/Homelab" target="_blank" rel="noopener">View repo &rarr;</a>
+            </article>
+            <article class="card">
+              <h3>nixos</h3>
+              <p class="card__lang">Nix</p>
+              <p>Declarative NixOS system configuration used across homelab and personal machines.</p>
+              <a href="https://github.com/AVEX41/nixos" target="_blank" rel="noopener">View repo &rarr;</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="photography">
+        <h2 class="section__heading"><span class="section__index">04</span> Photography</h2>
+        <div class="section__content">
+          <p>Selected shots. Replace the placeholders below with your own images.</p>
+          <div class="gallery">
+            <div class="gallery__item placeholder">01</div>
+            <div class="gallery__item placeholder">02</div>
+            <div class="gallery__item placeholder">03</div>
+            <div class="gallery__item placeholder">04</div>
+            <div class="gallery__item placeholder">05</div>
+            <div class="gallery__item placeholder">06</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--contact" id="contact">
+        <h2 class="section__heading"><span class="section__index">05</span> Contact</h2>
+        <div class="section__content">
+          <p>Open to conversations about security, infrastructure, or collaboration.</p>
+          <div class="contact-links">
+            <!-- TODO: replace with your real email/handles -->
+            <a href="mailto:your-email@example.com">your-email@example.com</a>
+            <a href="https://github.com/AVEX41" target="_blank" rel="noopener">github.com/AVEX41</a>
+            <a href="#" target="_blank" rel="noopener">LinkedIn &rarr; add link</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> Aleksander Hoff &mdash; built with Vite &amp; three.js, hosted on GitHub Pages.</p>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
