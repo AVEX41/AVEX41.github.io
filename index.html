@@ -47,53 +47,48 @@
       <section class="section" id="pentesting">
         <h2 class="section__heading"><span class="section__index">01</span> Pentesting</h2>
         <div class="section__content">
-          <p>
-            Hands-on offensive security practice through CTF-style labs and structured methodology
-            &mdash; reconnaissance, enumeration, exploitation, and reporting.
-          </p>
-
-          <!-- TODO: Replace placeholder numbers with your real Hack The Box profile stats -->
-          <a class="htb-stat-card" href="#" target="_blank" rel="noopener">
-            <div class="htb-stat-card__header">
-              <span class="htb-stat-card__label">Hack The Box Profile</span>
-              <span class="htb-stat-card__link">View profile &rarr;</span>
+          <div class="terminal-window">
+            <div class="terminal-window__bar">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+              <span class="terminal-window__title">aleksander@ntnu: ~/pentesting</span>
             </div>
-            <div class="htb-stat-card__grid">
-              <div class="htb-stat">
-                <span class="htb-stat__value">&mdash;</span>
-                <span class="htb-stat__label">Rank</span>
+            <div class="terminal-window__body">
+              <p><span class="prompt">$</span><span class="cmd"> curl -s htb.profile/aleksander --stats</span></p>
+              <div class="output">
+                <!-- TODO: Replace placeholder numbers with your real Hack The Box profile stats -->
+                <div class="stat-row">
+                  <div class="stat"><span class="stat__value">&mdash;</span><span class="stat__label">Rank</span></div>
+                  <div class="stat"><span class="stat__value">&mdash;</span><span class="stat__label">Points</span></div>
+                  <div class="stat"><span class="stat__value">&mdash;</span><span class="stat__label">Pwned</span></div>
+                  <div class="stat"><span class="stat__value">&mdash;</span><span class="stat__label">Global Rank</span></div>
+                </div>
+                <p class="dim">&rarr; <a href="#" target="_blank" rel="noopener">view full profile on hackthebox.com</a></p>
               </div>
-              <div class="htb-stat">
-                <span class="htb-stat__value">&mdash;</span>
-                <span class="htb-stat__label">Points</span>
+
+              <p><span class="prompt">$</span><span class="cmd"> cat methodology.md</span></p>
+              <div class="output">
+                <p>Every engagement follows the same structure regardless of scope:</p>
+                <p class="kv">1. <b>Recon</b> &mdash; passive + active reconnaissance to map the attack surface</p>
+                <p class="kv">2. <b>Enumeration</b> &mdash; systematic service and vulnerability discovery</p>
+                <p class="kv">3. <b>Exploitation</b> &mdash; targeted, once a viable vector is confirmed</p>
+                <p class="kv">4. <b>Reporting</b> &mdash; clear writeup of impact and remediation</p>
               </div>
-              <div class="htb-stat">
-                <span class="htb-stat__value">&mdash;</span>
-                <span class="htb-stat__label">Machines Pwned</span>
+
+              <p><span class="prompt">$</span><span class="cmd"> ls -la ~/repos/pentesting</span></p>
+              <div class="output">
+                <div class="repo-line">
+                  <div>
+                    <a class="repo-name" href="https://github.com/AVEX41/SecScripts" target="_blank" rel="noopener">SecScripts/</a>
+                    <p class="repo-desc">Utility and automation scripts used during security coursework and labs.</p>
+                  </div>
+                  <span class="repo-lang">Python</span>
+                </div>
               </div>
-              <div class="htb-stat">
-                <span class="htb-stat__value">&mdash;</span>
-                <span class="htb-stat__label">Global Ranking</span>
-              </div>
+
+              <p><span class="prompt">$</span><span class="typed-cursor">_</span></p>
             </div>
-          </a>
-
-          <h3 class="subheading">Methodology</h3>
-          <p>
-            Every engagement follows the same structure regardless of scope: passive and active
-            reconnaissance to map the attack surface, systematic enumeration of exposed services,
-            targeted exploitation once a viable vector is confirmed, and a clear writeup of impact
-            and remediation. Tooling and scratch scripts used along the way live in
-            <a href="https://github.com/AVEX41/SecScripts" target="_blank" rel="noopener">SecScripts</a>.
-          </p>
-
-          <div class="card-grid card-grid--single">
-            <article class="card">
-              <h3>SecScripts</h3>
-              <p class="card__lang">Python</p>
-              <p>Utility and automation scripts used during security coursework and lab exercises.</p>
-              <a href="https://github.com/AVEX41/SecScripts" target="_blank" rel="noopener">View repo &rarr;</a>
-            </article>
           </div>
         </div>
       </section>
@@ -127,28 +122,37 @@
       <section class="section" id="homelab">
         <h2 class="section__heading"><span class="section__index">03</span> Homelab</h2>
         <div class="section__content">
-          <p>
-            A self-hosted infrastructure stack used to practice virtualization, automation,
-            and storage design &mdash; managed like production, not a toy.
-          </p>
+          <div class="terminal-window">
+            <div class="terminal-window__bar">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+              <span class="terminal-window__title">aleksander@ntnu: ~/homelab</span>
+            </div>
+            <div class="terminal-window__body">
+              <p><span class="prompt">$</span><span class="cmd"> neofetch --homelab</span></p>
+              <!-- TODO: replace with your real node count, services, and specs -->
+              <div class="output">
+                <p class="kv"><b>Virtualization</b> &mdash; Proxmox VE, TODO: node count / cluster layout</p>
+                <p class="kv"><b>Storage</b> &mdash; ZFS pool, TODO: capacity / redundancy level</p>
+                <p class="kv"><b>Backups</b> &mdash; Restic, TODO: schedule and destinations</p>
+                <p class="kv"><b>Networking</b> &mdash; TODO: VLAN segmentation / firewall setup</p>
+                <p class="kv"><b>Services</b> &mdash; TODO: media server, dashboards, monitoring stack</p>
+              </div>
 
-          <h3 class="subheading">What's Running</h3>
-          <!-- TODO: replace with your real node count, services, and specs -->
-          <ul class="infra-list">
-            <li><span class="infra-list__label">Virtualization</span> &mdash; Proxmox VE, TODO: node count / cluster layout</li>
-            <li><span class="infra-list__label">Storage</span> &mdash; ZFS pool, TODO: capacity / redundancy level</li>
-            <li><span class="infra-list__label">Backups</span> &mdash; Restic, TODO: schedule and destinations</li>
-            <li><span class="infra-list__label">Networking</span> &mdash; TODO: VLAN segmentation / firewall setup</li>
-            <li><span class="infra-list__label">Services</span> &mdash; TODO: media server, dashboards, monitoring stack, etc.</li>
-          </ul>
+              <p><span class="prompt">$</span><span class="cmd"> ls -la ~/repos/homelab</span></p>
+              <div class="output">
+                <div class="repo-line">
+                  <div>
+                    <a class="repo-name" href="https://github.com/AVEX41/Homelab" target="_blank" rel="noopener">Homelab/</a>
+                    <p class="repo-desc">Infrastructure-as-code configuration: provisioning, networking, services.</p>
+                  </div>
+                  <span class="repo-lang">Terraform</span>
+                </div>
+              </div>
 
-          <div class="card-grid card-grid--single">
-            <article class="card">
-              <h3>Homelab</h3>
-              <p class="card__lang">Terraform (HCL)</p>
-              <p>Infrastructure-as-code configuration for the homelab environment: provisioning, networking, and services.</p>
-              <a href="https://github.com/AVEX41/Homelab" target="_blank" rel="noopener">View repo &rarr;</a>
-            </article>
+              <p><span class="prompt">$</span><span class="typed-cursor">_</span></p>
+            </div>
           </div>
         </div>
       </section>
