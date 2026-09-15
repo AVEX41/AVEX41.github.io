@@ -6,3 +6,76 @@ if (canvas) initBackgroundScene(canvas);
 
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+const SECTION_IDS = ["hero", "pentesting", "student", "homelab", "photography", "contact"];
+
+function getSections(): HTMLElement[] {
+  return SECTION_IDS
+    .map((id) => document.getElementById(id))
+    .filter((el): el is HTMLElement => el !== null);
+}
+
+function getNavOffset(): number {
+  const nav = document.querySelector<HTMLElement>(".nav");
+  return nav ? nav.getBoundingClientRect().height : 0;
+}
+
+function currentSectionIndex(sections: HTMLElement[]): number {
+  const probe = window.scrollY + getNavOffset() + 40;
+  let idx = 0;
+  sections.forEach((sec, i) => {
+    if (sec.offsetTop <= probe) idx = i;
+  });
+  return idx;
+}
+
+function smoothScrollTo(el: HTMLElement) {
+  const top = el.getBoundingClientRect().top + window.scrollY - getNavOffset() + 1;
+  window.scrollTo({ top, behavior: "smooth" });
+}
+
+function goToNextSection() {
+  const sections = getSections();
+  if (sections.length === 0) return;
+  const idx = currentSectionIndex(sections);
+  const next = sections[Math.min(idx + 1, sections.length - 1)];
+  if (next) smoothScrollTo(next);
+}
+
+function goToPrevSection() {
+  const sections = getSections();
+  if (sections.length === 0) return;
+  const idx = currentSectionIndex(sections);
+  const prev = sections[Math.max(idx - 1, 0)];
+  if (prev) smoothScrollTo(prev);
+}
+
+window.addEventListener("keydown", (e) => {
+  const target = e.target as HTMLElement | null;
+  const isTypingField =
+    target &&
+    (target.tagName === "INPUT" ||
+      target.tagName === "TEXTAREA" ||
+      target.isContentEditable);
+  if (isTypingField) return;
+
+  if (e.key === "Enter" || e.key === "ArrowDown") {
+    e.preventDefault();
+    goToNextSection();
+  } else if (e.key === "ArrowUp") {
+    e.preventDefault();
+    goToPrevSection();
+  }
+});
+
+document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (e) => {
+    const id = link.getAttribute("href")?.slice(1);
+    if (!id) return;
+    const target = document.getElementById(id);
+    if (!target) return;
+    e.preventDefault();
+    smoothScrollTo(target);
+    history.pushState(null, "", `#${id}`);
+  });
+});
