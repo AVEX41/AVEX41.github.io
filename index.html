@@ -49,27 +49,50 @@
         <div class="section__content">
           <p>
             Hands-on offensive security practice through CTF-style labs and structured methodology
-            &mdash; reconnaissance, enumeration, exploitation, and reporting. Currently building out
-            a public writeup archive for retired lab machines and documenting tooling in
+            &mdash; reconnaissance, enumeration, exploitation, and reporting.
+          </p>
+
+          <!-- TODO: Replace placeholder numbers with your real Hack The Box profile stats -->
+          <a class="htb-stat-card" href="#" target="_blank" rel="noopener">
+            <div class="htb-stat-card__header">
+              <span class="htb-stat-card__label">Hack The Box Profile</span>
+              <span class="htb-stat-card__link">View profile &rarr;</span>
+            </div>
+            <div class="htb-stat-card__grid">
+              <div class="htb-stat">
+                <span class="htb-stat__value">&mdash;</span>
+                <span class="htb-stat__label">Rank</span>
+              </div>
+              <div class="htb-stat">
+                <span class="htb-stat__value">&mdash;</span>
+                <span class="htb-stat__label">Points</span>
+              </div>
+              <div class="htb-stat">
+                <span class="htb-stat__value">&mdash;</span>
+                <span class="htb-stat__label">Machines Pwned</span>
+              </div>
+              <div class="htb-stat">
+                <span class="htb-stat__value">&mdash;</span>
+                <span class="htb-stat__label">Global Ranking</span>
+              </div>
+            </div>
+          </a>
+
+          <h3 class="subheading">Methodology</h3>
+          <p>
+            Every engagement follows the same structure regardless of scope: passive and active
+            reconnaissance to map the attack surface, systematic enumeration of exposed services,
+            targeted exploitation once a viable vector is confirmed, and a clear writeup of impact
+            and remediation. Tooling and scratch scripts used along the way live in
             <a href="https://github.com/AVEX41/SecScripts" target="_blank" rel="noopener">SecScripts</a>.
           </p>
-          <div class="badge-row">
-            <!-- TODO: Replace with your real Hack The Box / TryHackMe profile badge embed -->
-            <a class="badge badge--placeholder" href="#" target="_blank" rel="noopener">Hack&nbsp;The&nbsp;Box profile &rarr; add link</a>
-            <a class="badge badge--placeholder" href="#" target="_blank" rel="noopener">TryHackMe profile &rarr; add link</a>
-          </div>
-          <div class="card-grid">
+
+          <div class="card-grid card-grid--single">
             <article class="card">
               <h3>SecScripts</h3>
               <p class="card__lang">Python</p>
               <p>Utility and automation scripts used during security coursework and lab exercises.</p>
               <a href="https://github.com/AVEX41/SecScripts" target="_blank" rel="noopener">View repo &rarr;</a>
-            </article>
-            <article class="card card--placeholder">
-              <h3>Retired-Box Writeup</h3>
-              <p class="card__lang">Methodology</p>
-              <p>TODO: link your first published HTB/THM retired-machine writeup here.</p>
-              <a href="#">Add writeup &rarr;</a>
             </article>
           </div>
         </div>
@@ -81,20 +104,21 @@
           <p>
             Studying <strong>Digital infrastruktur og cybersikkerhet</strong> at NTNU Gjøvik.
             Coursework spans networking, systems administration, scripting, and applied
-            cybersecurity &mdash; documented and versioned like real projects, not throwaway assignments.
+            cybersecurity &mdash; the goal is depth over shortcuts, treating assignments like
+            real projects rather than throwaway exercises.
           </p>
-          <div class="card-grid">
-            <article class="card">
-              <h3>DSCG1002 &mdash; Prosjekt</h3>
-              <p class="card__lang">HTML</p>
-              <p>Cybersikkerhet og Teamarbeid course project website.</p>
-              <a href="https://github.com/AVEX41/DSCG1002-Prosjekt" target="_blank" rel="noopener">View repo &rarr;</a>
-            </article>
+          <div class="card-grid card-grid--single">
             <article class="card">
               <h3>BulkRenamePS</h3>
               <p class="card__lang">PowerShell</p>
               <p>DCSG1005 assignment: batch file-renaming tool with interactive prompts and conflict handling.</p>
               <a href="https://github.com/AVEX41/BulkRenamePS" target="_blank" rel="noopener">View repo &rarr;</a>
+            </article>
+            <article class="card card--placeholder">
+              <h3>Next NTNU Project</h3>
+              <p class="card__lang">Reserved</p>
+              <p>TODO: swap in the next coursework project worth showcasing.</p>
+              <a href="#">Coming soon &rarr;</a>
             </article>
           </div>
         </div>
@@ -105,20 +129,25 @@
         <div class="section__content">
           <p>
             A self-hosted infrastructure stack used to practice virtualization, automation,
-            and storage design &mdash; Proxmox, ZFS, and infrastructure-as-code, managed like production.
+            and storage design &mdash; managed like production, not a toy.
           </p>
-          <div class="card-grid">
+
+          <h3 class="subheading">What's Running</h3>
+          <!-- TODO: replace with your real node count, services, and specs -->
+          <ul class="infra-list">
+            <li><span class="infra-list__label">Virtualization</span> &mdash; Proxmox VE, TODO: node count / cluster layout</li>
+            <li><span class="infra-list__label">Storage</span> &mdash; ZFS pool, TODO: capacity / redundancy level</li>
+            <li><span class="infra-list__label">Backups</span> &mdash; Restic, TODO: schedule and destinations</li>
+            <li><span class="infra-list__label">Networking</span> &mdash; TODO: VLAN segmentation / firewall setup</li>
+            <li><span class="infra-list__label">Services</span> &mdash; TODO: media server, dashboards, monitoring stack, etc.</li>
+          </ul>
+
+          <div class="card-grid card-grid--single">
             <article class="card">
               <h3>Homelab</h3>
               <p class="card__lang">Terraform (HCL)</p>
               <p>Infrastructure-as-code configuration for the homelab environment: provisioning, networking, and services.</p>
               <a href="https://github.com/AVEX41/Homelab" target="_blank" rel="noopener">View repo &rarr;</a>
-            </article>
-            <article class="card">
-              <h3>nixos</h3>
-              <p class="card__lang">Nix</p>
-              <p>Declarative NixOS system configuration used across homelab and personal machines.</p>
-              <a href="https://github.com/AVEX41/nixos" target="_blank" rel="noopener">View repo &rarr;</a>
             </article>
           </div>
         </div>
