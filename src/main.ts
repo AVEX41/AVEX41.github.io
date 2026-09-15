@@ -8,6 +8,7 @@ const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
 const SECTION_IDS = ["hero", "pentesting", "student", "homelab", "photography", "contact"];
+const SCROLL_DURATION_MS = 750;
 
 function getSections(): HTMLElement[] {
   return SECTION_IDS
@@ -29,9 +30,38 @@ function currentSectionIndex(sections: HTMLElement[]): number {
   return idx;
 }
 
+function easeInOutCubic(t: number): number {
+  return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+}
+
+let activeScrollToken = 0;
+
+function animatedScrollTo(targetY: number, duration = SCROLL_DURATION_MS) {
+  const token = ++activeScrollToken;
+  const startY = window.scrollY;
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const clampedTarget = Math.max(0, Math.min(targetY, maxScroll));
+  const clampedDistance = clampedTarget - startY;
+  let startTime: number | null = null;
+
+  function step(timestamp: number) {
+    if (token !== activeScrollToken) return;
+    if (startTime === null) startTime = timestamp;
+    const elapsed = timestamp - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = easeInOutCubic(progress);
+    window.scrollTo(0, startY + clampedDistance * eased);
+    if (progress < 1) {
+      requestAnimationFrame(step);
+    }
+  }
+
+  requestAnimationFrame(step);
+}
+
 function smoothScrollTo(el: HTMLElement) {
   const top = el.getBoundingClientRect().top + window.scrollY - getNavOffset() + 1;
-  window.scrollTo({ top, behavior: "smooth" });
+  animatedScrollTo(top);
 }
 
 function goToNextSection() {
