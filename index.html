@@ -6,6 +6,8 @@
     <title>Aleksander Hoff | Cybersecurity & Infrastructure</title>
     <meta name="description" content="Aleksander Hoff - Cybersecurity student, homelab builder, and pentesting enthusiast." />
     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/style.css" />
@@ -96,25 +98,41 @@
       <section class="section" id="student">
         <h2 class="section__heading"><span class="section__index">02</span> IT Student</h2>
         <div class="section__content">
-          <p>
-            Studying <strong>Digital infrastruktur og cybersikkerhet</strong> at NTNU Gjøvik.
-            Coursework spans networking, systems administration, scripting, and applied
-            cybersecurity &mdash; the goal is depth over shortcuts, treating assignments like
-            real projects rather than throwaway exercises.
-          </p>
-          <div class="card-grid card-grid--single">
-            <article class="card">
-              <h3>BulkRenamePS</h3>
-              <p class="card__lang">PowerShell</p>
-              <p>DCSG1005 assignment: batch file-renaming tool with interactive prompts and conflict handling.</p>
-              <a href="https://github.com/AVEX41/BulkRenamePS" target="_blank" rel="noopener">View repo &rarr;</a>
-            </article>
-            <article class="card card--placeholder">
-              <h3>Next NTNU Project</h3>
-              <p class="card__lang">Reserved</p>
-              <p>TODO: swap in the next coursework project worth showcasing.</p>
-              <a href="#">Coming soon &rarr;</a>
-            </article>
+          <div class="terminal-window">
+            <div class="terminal-window__bar">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+              <span class="terminal-window__title">aleksander@ntnu: ~/education</span>
+            </div>
+            <div class="terminal-window__body">
+              <p><span class="prompt">$</span><span class="cmd"> cat program.txt</span></p>
+              <div class="output">
+                <p><b>Digital infrastruktur og cybersikkerhet</b> &mdash; NTNU Gjøvik</p>
+                <p class="dim">Networking &middot; systems administration &middot; scripting &middot; applied cybersecurity</p>
+                <p>Depth over shortcuts &mdash; coursework treated as real projects, not throwaway assignments.</p>
+              </div>
+
+              <p><span class="prompt">$</span><span class="cmd"> ls -la ~/repos/coursework</span></p>
+              <div class="output">
+                <div class="repo-line">
+                  <div>
+                    <a class="repo-name" href="https://github.com/AVEX41/BulkRenamePS" target="_blank" rel="noopener">BulkRenamePS/</a>
+                    <p class="repo-desc">DCSG1005 assignment: batch file-renaming tool with interactive prompts and conflict handling.</p>
+                  </div>
+                  <span class="repo-lang">PowerShell</span>
+                </div>
+                <div class="repo-line repo-line--pending">
+                  <div>
+                    <span class="repo-name">next-ntnu-project/</span>
+                    <p class="repo-desc">TODO: reserved slot for the next coursework project worth showcasing.</p>
+                  </div>
+                  <span class="repo-lang">pending</span>
+                </div>
+              </div>
+
+              <p><span class="prompt">$</span><span class="typed-cursor">_</span></p>
+            </div>
           </div>
         </div>
       </section>
