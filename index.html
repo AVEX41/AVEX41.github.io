@@ -1,72 +1,83 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aleksander Hoff | Cybersecurity & Infrastructure</title>
-    <meta name="description" content="Aleksander Hoff - Cybersecurity student, homelab builder, and pentesting enthusiast." />
-    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/style.css" />
-  </head>
-  <body>
-    <canvas id="bg-canvas"></canvas>
 
-    <nav class="nav">
-      <div class="nav__logo">AH<span class="cursor">_</span></div>
-      <ul class="nav__links">
-        <li><a href="#pentesting">01. Pentesting</a></li>
-        <li><a href="#student">02. Education</a></li>
-        <li><a href="#homelab">03. Homelab</a></li>
-        <li><a href="#photography">04. Photography</a></li>
-        <li><a href="#contact">05. Contact</a></li>
-      </ul>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aleksander Hoff | Cybersecurity & Infrastructure</title>
+  <meta name="description"
+    content="Aleksander Hoff - Cybersecurity student, homelab builder, and pentesting enthusiast." />
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
 
-    <main>
-      <section class="hero" id="hero">
-        <div class="terminal-window hero__terminal">
+<body>
+  <canvas id="bg-canvas"></canvas>
+
+  <nav class="nav">
+    <div class="nav__logo">AH<span class="cursor">_</span></div>
+    <ul class="nav__links">
+      <li><a href="#pentesting">01. Pentesting</a></li>
+      <li><a href="#student">02. Education</a></li>
+      <li><a href="#homelab">03. Homelab</a></li>
+      <li><a href="#photography">04. Photography</a></li>
+      <li><a href="#contact">05. Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="terminal-window hero__terminal">
+        <div class="terminal-window__bar">
+          <span class="dot dot--red"></span>
+          <span class="dot dot--yellow"></span>
+          <span class="dot dot--green"></span>
+          <span class="terminal-window__title">aleksander@ntnu:~$</span>
+        </div>
+        <div class="terminal-window__body">
+          <p><span class="prompt">$</span> whoami</p>
+          <h1 class="hero__name">Aleksander Hoff</h1>
+          <p><span class="prompt">$</span> cat role.txt</p>
+          <p class="hero__role">Cybersecurity &amp; Digital Infrastructure student @ NTNU &mdash; building, breaking,
+            and documenting systems.</p>
+          <p><span class="prompt">$</span> ./explore.sh <span class="typed-cursor">_</span></p>
+          <p class="hero__hint">press <kbd>Enter</kbd> to continue &darr;</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pentesting">
+      <h2 class="section__heading"><span class="section__index">01</span> Pentesting</h2>
+      <div class="section__content">
+        <div class="terminal-window">
           <div class="terminal-window__bar">
             <span class="dot dot--red"></span>
             <span class="dot dot--yellow"></span>
             <span class="dot dot--green"></span>
-            <span class="terminal-window__title">aleksander@ntnu:~$</span>
+            <span class="terminal-window__title">aleksander@ntnu: ~/pentesting</span>
           </div>
           <div class="terminal-window__body">
-            <p><span class="prompt">$</span> whoami</p>
-            <h1 class="hero__name">Aleksander Hoff</h1>
-            <p><span class="prompt">$</span> cat role.txt</p>
-            <p class="hero__role">Cybersecurity &amp; Digital Infrastructure student @ NTNU &mdash; building, breaking, and documenting systems.</p>
-            <p><span class="prompt">$</span> ./explore.sh <span class="typed-cursor">_</span></p>
-            <p class="hero__hint">press <kbd>Enter</kbd> to continue &darr;</p>
-          </div>
-        </div>
-      </section>
+            <p><span class="prompt">$</span><span class="cmd"> curl -s htb.profile/aleksander --stats</span></p>
+            <div class="output">
 
-      <section class="section" id="pentesting">
-        <h2 class="section__heading"><span class="section__index">01</span> Pentesting</h2>
-        <div class="section__content">
-          <div class="terminal-window">
-            <div class="terminal-window__bar">
-              <span class="dot dot--red"></span>
-              <span class="dot dot--yellow"></span>
-              <span class="dot dot--green"></span>
-              <span class="terminal-window__title">aleksander@ntnu: ~/pentesting</span>
-            </div>
-            <div class="terminal-window__body">
-              <p><span class="prompt">$</span><span class="cmd"> curl -s htb.profile/aleksander --stats</span></p>
-              <div class="output">
-                <!-- TODO: Replace placeholder numbers with your real Hack The Box profile stats -->
-                <div class="stat-row">
-                  <div class="stat"><span class="stat__value">&mdash;</span><span class="stat__label">Rank</span></div>
-                  <div class="stat"><span class="stat__value">&mdash;</span><span class="stat__label">Points</span></div>
-                  <div class="stat"><span class="stat__value">&mdash;</span><span class="stat__label">Pwned</span></div>
-                  <div class="stat"><span class="stat__value">&mdash;</span><span class="stat__label">Global Rank</span></div>
+              <div class="stat-row">
+                <div class="stat"><span class="stat__value">Skilled</span><span class="stat__label">Academy rank</span>
                 </div>
-                <p class="dim">&rarr; <a href="#" target="_blank" rel="noopener">view full profile on hackthebox.com</a></p>
+                <div class="stat"><span class="stat__value">38</span><span class="stat__label">Academy level</span>
+                </div>
+
+                <!-- TODO: Replace placeholder numbers with your real Hack The Box profile stats -->
+                <div class="stat"><span class="stat__value">&mdash;</span><span class="stat__label">Pwned</span></div>
+                <div class="stat"><span class="stat__value">&mdash;</span><span class="stat__label">Global Rank</span>
+                </div>
+                <p class="dim">&rarr; <a href="#" target="_blank" rel="noopener">view full profile on hackthebox.com</a>
+                </p>
               </div>
 
               <p><span class="prompt">$</span><span class="cmd"> cat methodology.md</span></p>
@@ -82,7 +93,8 @@
               <div class="output">
                 <div class="repo-line">
                   <div>
-                    <a class="repo-name" href="https://github.com/AVEX41/SecScripts" target="_blank" rel="noopener">SecScripts/</a>
+                    <a class="repo-name" href="https://github.com/AVEX41/SecScripts" target="_blank"
+                      rel="noopener">SecScripts/</a>
                     <p class="repo-desc">Utility and automation scripts used during security coursework and labs.</p>
                   </div>
                   <span class="repo-lang">Python</span>
@@ -93,121 +105,126 @@
             </div>
           </div>
         </div>
-      </section>
+    </section>
 
-      <section class="section" id="student">
-        <h2 class="section__heading"><span class="section__index">02</span> IT Student</h2>
-        <div class="section__content">
-          <div class="terminal-window">
-            <div class="terminal-window__bar">
-              <span class="dot dot--red"></span>
-              <span class="dot dot--yellow"></span>
-              <span class="dot dot--green"></span>
-              <span class="terminal-window__title">aleksander@ntnu: ~/education</span>
+    <section class="section" id="student">
+      <h2 class="section__heading"><span class="section__index">02</span> IT Student</h2>
+      <div class="section__content">
+        <div class="terminal-window">
+          <div class="terminal-window__bar">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+            <span class="terminal-window__title">aleksander@ntnu: ~/education</span>
+          </div>
+          <div class="terminal-window__body">
+            <p><span class="prompt">$</span><span class="cmd"> cat program.txt</span></p>
+            <div class="output">
+              <p><b>Digital infrastruktur og cybersikkerhet</b> &mdash; NTNU Gjøvik</p>
+              <p class="dim">Networking &middot; systems administration &middot; scripting &middot; applied
+                cybersecurity</p>
+              <p>Depth over shortcuts &mdash; coursework treated as real projects, not throwaway assignments.</p>
             </div>
-            <div class="terminal-window__body">
-              <p><span class="prompt">$</span><span class="cmd"> cat program.txt</span></p>
-              <div class="output">
-                <p><b>Digital infrastruktur og cybersikkerhet</b> &mdash; NTNU Gjøvik</p>
-                <p class="dim">Networking &middot; systems administration &middot; scripting &middot; applied cybersecurity</p>
-                <p>Depth over shortcuts &mdash; coursework treated as real projects, not throwaway assignments.</p>
-              </div>
 
-              <p><span class="prompt">$</span><span class="cmd"> ls -la ~/repos/coursework</span></p>
-              <div class="output">
-                <div class="repo-line">
-                  <div>
-                    <a class="repo-name" href="https://github.com/AVEX41/BulkRenamePS" target="_blank" rel="noopener">BulkRenamePS/</a>
-                    <p class="repo-desc">DCSG1005 assignment: batch file-renaming tool with interactive prompts and conflict handling.</p>
-                  </div>
-                  <span class="repo-lang">PowerShell</span>
+            <p><span class="prompt">$</span><span class="cmd"> ls -la ~/repos/coursework</span></p>
+            <div class="output">
+              <div class="repo-line">
+                <div>
+                  <a class="repo-name" href="https://github.com/AVEX41/BulkRenamePS" target="_blank"
+                    rel="noopener">BulkRenamePS/</a>
+                  <p class="repo-desc">DCSG1005 assignment: batch file-renaming tool with interactive prompts and
+                    conflict handling.</p>
                 </div>
-                <div class="repo-line repo-line--pending">
-                  <div>
-                    <span class="repo-name">next-ntnu-project/</span>
-                    <p class="repo-desc">TODO: reserved slot for the next coursework project worth showcasing.</p>
-                  </div>
-                  <span class="repo-lang">pending</span>
+                <span class="repo-lang">PowerShell</span>
+              </div>
+              <div class="repo-line repo-line--pending">
+                <div>
+                  <span class="repo-name">next-ntnu-project/</span>
+                  <p class="repo-desc">TODO: reserved slot for the next coursework project worth showcasing.</p>
                 </div>
+                <span class="repo-lang">pending</span>
               </div>
-
-              <p><span class="prompt">$</span><span class="typed-cursor">_</span></p>
             </div>
+
+            <p><span class="prompt">$</span><span class="typed-cursor">_</span></p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section" id="homelab">
-        <h2 class="section__heading"><span class="section__index">03</span> Homelab</h2>
-        <div class="section__content">
-          <div class="terminal-window">
-            <div class="terminal-window__bar">
-              <span class="dot dot--red"></span>
-              <span class="dot dot--yellow"></span>
-              <span class="dot dot--green"></span>
-              <span class="terminal-window__title">aleksander@ntnu: ~/homelab</span>
+    <section class="section" id="homelab">
+      <h2 class="section__heading"><span class="section__index">03</span> Homelab</h2>
+      <div class="section__content">
+        <div class="terminal-window">
+          <div class="terminal-window__bar">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+            <span class="terminal-window__title">aleksander@ntnu: ~/homelab</span>
+          </div>
+          <div class="terminal-window__body">
+            <p><span class="prompt">$</span><span class="cmd"> neofetch --homelab</span></p>
+            <!-- TODO: replace with your real node count, services, and specs -->
+            <div class="output">
+              <p class="kv"><b>Virtualization</b> &mdash; Proxmox VE, TODO: node count / cluster layout</p>
+              <p class="kv"><b>Storage</b> &mdash; ZFS pool, TODO: capacity / redundancy level</p>
+              <p class="kv"><b>Backups</b> &mdash; Restic, TODO: schedule and destinations</p>
+              <p class="kv"><b>Networking</b> &mdash; TODO: VLAN segmentation / firewall setup</p>
+              <p class="kv"><b>Services</b> &mdash; TODO: media server, dashboards, monitoring stack</p>
             </div>
-            <div class="terminal-window__body">
-              <p><span class="prompt">$</span><span class="cmd"> neofetch --homelab</span></p>
-              <!-- TODO: replace with your real node count, services, and specs -->
-              <div class="output">
-                <p class="kv"><b>Virtualization</b> &mdash; Proxmox VE, TODO: node count / cluster layout</p>
-                <p class="kv"><b>Storage</b> &mdash; ZFS pool, TODO: capacity / redundancy level</p>
-                <p class="kv"><b>Backups</b> &mdash; Restic, TODO: schedule and destinations</p>
-                <p class="kv"><b>Networking</b> &mdash; TODO: VLAN segmentation / firewall setup</p>
-                <p class="kv"><b>Services</b> &mdash; TODO: media server, dashboards, monitoring stack</p>
-              </div>
 
-              <p><span class="prompt">$</span><span class="cmd"> ls -la ~/repos/homelab</span></p>
-              <div class="output">
-                <div class="repo-line">
-                  <div>
-                    <a class="repo-name" href="https://github.com/AVEX41/Homelab" target="_blank" rel="noopener">Homelab/</a>
-                    <p class="repo-desc">Infrastructure-as-code configuration: provisioning, networking, services.</p>
-                  </div>
-                  <span class="repo-lang">Terraform</span>
+            <p><span class="prompt">$</span><span class="cmd"> ls -la ~/repos/homelab</span></p>
+            <div class="output">
+              <div class="repo-line">
+                <div>
+                  <a class="repo-name" href="https://github.com/AVEX41/Homelab" target="_blank"
+                    rel="noopener">Homelab/</a>
+                  <p class="repo-desc">Infrastructure-as-code configuration: provisioning, networking, services.</p>
                 </div>
+                <span class="repo-lang">Terraform</span>
               </div>
-
-              <p><span class="prompt">$</span><span class="typed-cursor">_</span></p>
             </div>
+
+            <p><span class="prompt">$</span><span class="typed-cursor">_</span></p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section" id="photography">
-        <h2 class="section__heading"><span class="section__index">04</span> Photography</h2>
-        <div class="section__content">
-          <p>Selected shots. Replace the placeholders below with your own images.</p>
-          <div class="gallery">
-            <div class="gallery__item placeholder">01</div>
-            <div class="gallery__item placeholder">02</div>
-            <div class="gallery__item placeholder">03</div>
-            <div class="gallery__item placeholder">04</div>
-            <div class="gallery__item placeholder">05</div>
-            <div class="gallery__item placeholder">06</div>
-          </div>
+    <section class="section" id="photography">
+      <h2 class="section__heading"><span class="section__index">04</span> Photography</h2>
+      <div class="section__content">
+        <p>Selected shots. Replace the placeholders below with your own images.</p>
+        <div class="gallery">
+          <div class="gallery__item placeholder">01</div>
+          <div class="gallery__item placeholder">02</div>
+          <div class="gallery__item placeholder">03</div>
+          <div class="gallery__item placeholder">04</div>
+          <div class="gallery__item placeholder">05</div>
+          <div class="gallery__item placeholder">06</div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section section--contact" id="contact">
-        <h2 class="section__heading"><span class="section__index">05</span> Contact</h2>
-        <div class="section__content">
-          <p>Open to conversations about security, infrastructure, or collaboration.</p>
-          <div class="contact-links">
-            <!-- TODO: replace with your real email/handles -->
-            <a href="mailto:your-email@example.com">your-email@example.com</a>
-            <a href="https://github.com/AVEX41" target="_blank" rel="noopener">github.com/AVEX41</a>
-            <a href="#" target="_blank" rel="noopener">LinkedIn &rarr; add link</a>
-          </div>
+    <section class="section section--contact" id="contact">
+      <h2 class="section__heading"><span class="section__index">05</span> Contact</h2>
+      <div class="section__content">
+        <p>Open to conversations about security, infrastructure, or collaboration.</p>
+        <div class="contact-links">
+          <a href="https://github.com/AVEX41" target="_blank" rel="noopener">github.com/AVEX41</a>
+          <a href="https://www.linkedin.com/in/aleksander-hoff-86227b388" target="_blank"
+            rel="noopener">LinkedIn/Aleksander Hoff</a>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <footer class="footer">
-      <p>&copy; <span id="year"></span> Aleksander Hoff &mdash; built with Vite &amp; three.js, hosted on GitHub Pages.</p>
-    </footer>
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Aleksander Hoff &mdash; built with Vite &amp; three.js, hosted on GitHub Pages.
+    </p>
+  </footer>
 
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>
